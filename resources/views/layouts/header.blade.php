@@ -24,9 +24,9 @@
 							<h5 class="text-center">Dashboard</h5>
 						</span>
 					</a>
-				</li>
+				</li> --}}
 				<li class="col-md-3">
-					<a href="">
+					<a href="{{ route('auth.profile', $auth->slug) }}">
 						<span class="row">
 							<i class="fa fa-user"></i>
 						</span>
@@ -35,7 +35,7 @@
 						</span>
 					</a>
 				</li>
-				<li class="col-md-3">
+				{{-- <li class="col-md-3">
 					<a href="">
 						<span class="row">
 							<i class="fa fa-cogs"></i>

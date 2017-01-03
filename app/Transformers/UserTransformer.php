@@ -5,11 +5,11 @@ namespace Notifier\Transformers;
 class UserTransformer extends Transformer
 {
 
-	public function __construct(NoteTransformer $noteTransformer, CommentTransformer $commentTransformer)
-	{
-		$this->noteTransformer = $noteTransformer;
-		$this->commentTransforer = $commentTransformer;
-	}
+	// public function __construct(NoteTransformer $noteTransformer, CommentTransformer $commentTransformer)
+	// {
+	// 	$this->noteTransformer = $noteTransformer;
+	// 	$this->commentTransforer = $commentTransformer;
+	// }
 	
 	public function transform($user)
 	{

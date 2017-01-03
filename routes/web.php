@@ -33,6 +33,11 @@ Route::post('/send-message', ['as' => 'welcome.send.message', 'uses' => 'HomeCon
 Route::group(['prefix' => 'app/home'], function() {
 	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
+	Route::group(['prefix' => 'profile'], function() 
+	{
+		Route::get('/{user_slug}', ['as' => 'auth.profile', 'uses' => 'HomeController@profile']);
+	});
+
 	// Route::get('/get-started', ['as' => ''])
 
 	// notes

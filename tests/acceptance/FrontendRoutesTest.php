@@ -70,5 +70,14 @@ class FrontendRoutesTest extends TestCase
         $this->actingAs($user)->get(route('home'))->assertResponseStatus(200);
     }
 
+    /**
+     * @test
+     */
+    public function test_auth_profile_route()
+    {
+        $user = factory(User::class)->create();
+        $this->actingAs($user)->get(route('auth.profile' , [$user->slug]))->assertResponseStatus(200);
+    }
+
 
 }

@@ -9,7 +9,9 @@ use Notifier\Mail\NewMessageSendMail;
 
 use Notifier\Note;
 use Notifier\Message;
+use Notifier\User;
 use Notifier\Transformers\NoteTransformer;
+use Notifier\Transformers\UserTransformer;
 
 use Mail;
 use Session;
@@ -21,13 +23,15 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct(Note $note, Message $message, Mail $mailer, NoteTransformer $noteTransformer)
+    public function __construct(User $user, Note $note, Message $message, Mail $mailer, NoteTransformer $noteTransformer, UserTransformer $userTransformer)
     {
         $this->middleware('auth', ['only' => 'index']);
+        $this->user = $user;
         $this->note = $note;
         $this->mailer = $mailer;
         $this->message = $message;
         $this->noteTransformer = $noteTransformer;
+        $this->userTransformer = $userTransformer;
     }
 
     /**
@@ -71,6 +75,23 @@ class HomeController extends Controller
         // return $notes;
 
         return view('home', compact('notes', 'js_variables'));
+    }
+
+    public function profile($user_slug)
+    {
+
+        $profile = $this->user->whereSlug(auth()->user()->slug)->firstOrFail();
+
+        if(!$profile)
+        {
+            return view('errors.404');
+        }
+
+        return $profile;
+
+        $js_variables = [
+            'profile' => $this->userTransformer->transform($profile)
+        ];
     }
 
     /**

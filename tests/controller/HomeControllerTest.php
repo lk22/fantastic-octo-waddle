@@ -8,6 +8,9 @@ use Notifier\User;
 
 class HomeControllerTest extends TestCase
 {
+
+    use DatabaseMigrations, DatabaseTransactions;
+
     public static function setUpBeforeClass()
     {
     	echo "\n\n Testing Home Controller hold on...\n";
@@ -31,5 +34,17 @@ class HomeControllerTest extends TestCase
         $notes = $this->user->with('notes')->where('id', $this->user->id)->get();
         
         $this->assertTrue(count($notes) > 0);
+    }
+
+    /**
+     * @test
+     */
+    public function show_authed_profile()
+    {
+        $this->actingAs($this->user);
+
+        $profile = $this->user->whereSlug($this->user->slug)->get();
+
+        $this->assertTrue(count($profile) > 0);
     }
 }

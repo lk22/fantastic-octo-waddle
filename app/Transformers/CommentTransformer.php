@@ -2,15 +2,14 @@
 
 namespace Notifier\Transformers;
 
-
-class CommentTransformer extends Transformers
+class CommentTransformer extends Transformer
 {
 
-	public function __construct(UserTransformer $userTransformer, NoteTransformer $noteTransformer)
-	{
-		$this->authorTransformer = $userTransformer;
-		$this->noteTransformer = $noteTransformer;
-	}
+	// public function __construct(UserTransformer $userTransformer, NoteTransformer $noteTransformer)
+	// {
+	// 	$this->authorTransformer = $userTransformer;
+	// 	$this->noteTransformer = $noteTransformer;
+	// }
 
 	public function transform($comment)
 	{
