@@ -1,0 +1,76 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+.header {
+  height: 4em;
+  font-family: 'Secular One', sans-serif;
+  color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: #174059;
+}
+
+.header .logo-container {
+  height: 100%;
+  width: 10em;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 3px;
+  background: #113042;
+}
+
+.header .logo-container h5 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#sidebar {
+  min-height: 46.2em;
+  min-width: 10em;
+  font-family: 'Secular One', sans-serif;
+  background: #113042;
+}
+
+#sidebar .navigation-list {
+  padding-top: 3em;
+}
+
+#sidebar .navigation-list .list-item {
+  margin-bottom: 2em;
+}
+
+#sidebar .navigation-list .list-item a {
+  color: #fff;
+  font-size: 12px;
+}
+
+#sidebar .auth-avatar-container {
+  color: #fff;
+}
+
+.card-wrapper {
+  height: 250px;
+  width: 100%;
+  padding: 1.5em;
+  padding-left: 15em;
+  margin-top: 1em;
+}
+
+.card-wrapper .notifier-card {
+  margin-right: 2em;
+  width: 24%;
+}
+
+.table-wrapper {
+  margin-top: 1em;
+  color: #000;
+}
+
+.content-wrapper {
+  min-height: 46.2em;
+  width: 81.4em;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*# sourceMappingURL=backend.css.map */

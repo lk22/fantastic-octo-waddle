@@ -1,0 +1,41 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import 'partials/_all';
+@import 'views/_all';
+
+
+body{
+	background:#fff;
+}
+
+.error-container{
+	height:40px;
+	background: #0095FF;
+	color: #FFF;
+	display:none;
+	position:fixed;
+	bottom:0px;
+	width: 100%;
+	z-index:1;
+}
+
+.connection-error-container{
+	height:40px;
+	background: #0095FF;
+	color: #FFF;
+	display:none;
+}
+
+.not-active-email-container{
+	height:40px;
+	background: $brand-danger;
+	color: #FFF;
+}

@@ -1,0 +1,21 @@
+#sidebar {
+	min-height:46.2em;
+	min-width: 10em;
+	font-family: 'Secular One', sans-serif;
+	background: #113042;
+
+	.navigation-list {
+		padding-top:3em;
+		.list-item{
+			margin-bottom:2em;
+			a{
+				color: #fff;
+				font-size:12px;
+			}
+		}
+	}
+
+	.auth-avatar-container {
+		color: #fff;
+	}
+}

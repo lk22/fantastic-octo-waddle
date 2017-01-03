@@ -1,0 +1,116 @@
+$brand-color: #0095FF;
+
+body{
+	background: $brand-color; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, $brand-color , #0072ff); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, $brand-color , #0072ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	        
+	height:100%;
+	width: 100%;
+	margin:0px;
+}
+
+#mail-wrapper{
+
+	.header{
+		
+		h1{
+			font-family: 'Secular One', sans-serif;
+			color: #fff;
+			margin-left:2%;
+		}
+	}
+
+	.registered-mail-content{
+		font-family: 'Secular One', sans-serif;
+		color: #FFF;
+		min-height:500px;
+		background:transparent;
+		// padding-top:5em;
+		padding-bottom:2em;
+		width: 80%;
+		margin:0px auto;
+		border-radius:15px 15px 15px 15px;
+		
+		.welcome-content{
+			padding-top:2%;
+			padding-bottom:2%;
+			background:#FFF;
+		}
+
+		img{
+			display:flex;
+			justify-content:center;
+			border: 1px solid $brand-color;
+			padding:5px;
+			padding-color: $brand-color;
+			border-radius:100px 100px 100px 100px;
+			margin:0px auto;
+		}
+		
+		.founder-row{
+			height: auto;
+			width: auto;
+			border-bottom:1px slashed $brand-color;
+			background:transparent;
+			color: #FFF;
+			padding-bottom:2%;
+			
+			p{
+				color: #FFF;
+				text-align:center;
+			}
+			img{
+				display:flex;
+				justify-content:center;
+				border: 1px solid $brand-color;
+				padding:5px;
+				padding-color: $brand-color;
+				border-radius:100px 100px 100px 100px;
+				margin:0px auto;
+			}
+		}
+
+		hr{
+			border-color:$brand-color;
+			width:100%;
+			margin:0px auto;
+			margin-top:6%;
+			margin-bottom:6%;
+		}
+
+		span{
+			color:$brand-color;
+			display:inline;
+			position:absolute;
+			bottom: -372px;
+   			left: 387px;
+		}
+
+		h1, h2, h3, h4, h5, h6, p{
+			text-align:center;
+			color: $brand-color;
+		}
+
+		a{
+			color: $brand-color;
+			margin:0px auto;
+		}
+
+		.get-started-image{
+			height:350px;
+			width: 350px;
+			margin: 0px auto;
+			border:none;
+			display:block;
+			padding:0px;
+		}
+
+		.redirect-btn{
+			margin-top:5%;
+			font-family: 'Secular One', sans-serif;
+			padding:2%;
+			color: $brand-color;
+		}
+	}
+}

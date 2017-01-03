@@ -1,0 +1,49 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: #0095FF;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #0095FF, #243B55);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(right, #0095FF, #243B55);
+  background: linear-gradient(to left, #0095FF, #243B55);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.brand-section {
+  color: #FFF;
+  font-family: 'Secular One', sans-serif;
+}
+
+.brand-section a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#authentication-wrapper {
+  height: 38em;
+  background: #FFF;
+  padding: 2em;
+}
+
+#authentication-wrapper form {
+  margin-top: 2em;
+}
+
+#authentication-wrapper form .input-field {
+  margin-bottom: 1em;
+}
+
+#authentication-wrapper form .input-field #icon_prefix {
+  margin-left: 1rem;
+}
+
+#authentication-wrapper form .input-field label {
+  margin-left: 1rem;
+}
+
+#authentication-wrapper form .btn {
+  margin-left: 1rem;
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,38 @@
+body {
+  height: 100%;
+  width: 100%;
+  background: url("../images/logout.jpg") center fixed;
+  /* fallback for old browsers */
+  background-size: cover;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #FFF;
+  padding-top: 10em;
+}
+
+body h1 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 10em;
+}
+
+body .return-btn {
+  padding: 1em;
+  border: 1px solid #fff;
+  color: #FFF;
+  text-decoration: none;
+}
+
+body .return-btn:hover {
+  background: #243B55;
+  -webkit-transition: ease-in-out 0.2s all;
+  transition: ease-in-out 0.2s all;
+}
+
+body .return-btn:not(:hover) {
+  -webkit-transition: ease-in-out 0.2s all;
+  transition: ease-in-out 0.2s all;
+}
+
+/*# sourceMappingURL=logout.css.map */

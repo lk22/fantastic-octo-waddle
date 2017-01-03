@@ -1,0 +1,35 @@
+
+.get-started-wrapper{
+	height:631px;
+	background: #059FFE;
+	padding-left:0px;
+	padding-right:0px;
+	
+	.get-started__left{
+		padding-left:0px;
+	}
+
+	.get-started__right{
+		color: #FFF;
+		padding-top:5%;
+		
+		p{
+			padding-top:2%;
+		}
+
+		.get-started__btn-block{
+			
+			.get-started-btn{
+				background:transparent;
+				color: #fff;
+				border-radius: 0px 0px 0px 0px;
+				border-color:#fff;
+				
+				&:hover{
+					background: #fff;
+					color: $header-color;
+				}
+			}
+		}
+	}
+}

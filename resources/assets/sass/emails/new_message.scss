@@ -1,0 +1,17 @@
+$brand-color: #0095FF;
+
+.new_message_container{
+	height:100%;
+	width: 100%;
+	background:#fff;
+	padding:2em;
+	
+	h1{
+		text-align:center;
+		color: $brand-color;
+	}
+
+	p, h2, h3, h4, h5, h6{
+		color: $brand-color;
+	}
+}

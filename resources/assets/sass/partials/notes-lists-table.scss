@@ -1,0 +1,75 @@
+$table-color: #0095FF;
+
+hr{
+	border-color:$table-color;
+	color: $table-color;
+	background-color:$table-color;
+}
+
+.notes-lists-table {
+	width: 65%;
+	margin-top:2%;
+	border-width: 65%;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:1%;
+	
+	#table-wrapper{
+		border-bottom:1px solid $table-color;
+		// display:none;
+	
+		tbody{
+			
+			.note-row{
+				padding-top:2%;
+				padding-bottom:2%;
+				
+				td{
+					// border-bottom:1px solid $table-color;
+					padding-top:2%;
+					padding-bottom:2%;
+				}
+
+				td.trash{
+					display:none;
+					padding-top:15px;
+					position:absolute;
+					right:220px;
+					
+					.fa{
+						font-size:18px;
+					}
+				}
+
+				.show{
+					display:block;
+				}
+			}
+		}
+	}
+
+	.btn{
+		background: transparent;
+		color: $table-color;
+		border-radius:0px 0px 0px 0px;
+		border-color:$table-color;
+		
+		&:hover{
+			background:$table-color;
+			color: #FFF;
+			-webkit-transition: ease-in-out 0.2s all;
+			   -moz-transition: ease-in-out 0.2s all;
+			    -ms-transition: ease-in-out 0.2s all;
+			     -o-transition: ease-in-out 0.2s all;
+			        transition: ease-in-out 0.2s all;
+		}
+
+		&:not(:hover){
+			-webkit-transition: ease-in-out 0.2s all;
+			   -moz-transition: ease-in-out 0.2s all;
+			    -ms-transition: ease-in-out 0.2s all;
+			     -o-transition: ease-in-out 0.2s all;
+			        transition: ease-in-out 0.2s all;
+		}
+	}
+}

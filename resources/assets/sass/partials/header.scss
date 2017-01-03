@@ -1,0 +1,141 @@
+$header-color: #0095FF;
+
+
+.white{
+	color: #fff;
+}
+
+#header{
+	min-height: 60px;
+	background: $header-color;
+	padding: 1em;
+	z-index:2;
+	.home-icon{
+		a{
+			font-size:25px;
+			color:white;
+			
+			span{
+				font-size: 15px;
+				opacity:0;
+				text-decoration:none;
+				position:absolute;
+				right:0px;
+				top:8px;
+			}
+			
+			&:hover{
+				span{
+					opacity: 1;
+					right:200px;
+				    -webkit-transition: ease-in-out 0.3s all;
+					   -moz-transition: ease-in-out 0.3s all;
+					    -ms-transition: ease-in-out 0.3s all;
+					     -o-transition: ease-in-out 0.3s all;
+					        transition: ease-in-out 0.3s all;
+				}
+
+				// .fa{
+				// 	transform: rotate(360deg);
+				// 	-webkit-transition: ease-in-out 0.5s all;
+				// 	   -moz-transition: ease-in-out 0.5s all;
+				// 	    -ms-transition: ease-in-out 0.5s all;
+				// 	     -o-transition: ease-in-out 0.5s all;
+				// 	        transition: ease-in-out 0.5s all;
+				// }
+			}
+
+			&:not(:hover){
+				// .fa{
+				// 	-webkit-transition: ease-in-out 0.3s all;
+				// 	   -moz-transition: ease-in-out 0.3s all;
+				// 	    -ms-transition: ease-in-out 0.3s all;
+				// 	     -o-transition: ease-in-out 0.3s all;
+				// 	        transition: ease-in-out 0.3s all;
+				// }
+
+				span{
+				    -webkit-transition: ease-in-out 0.3s all;
+					   -moz-transition: ease-in-out 0.3s all;
+					    -ms-transition: ease-in-out 0.3s all;
+					     -o-transition: ease-in-out 0.3s all;
+					        transition: ease-in-out 0.3s all;
+				}
+			}
+		}
+	}
+
+	.auth{
+		color: #FFF;
+		padding-top:4%;
+		
+		p{
+			cursor:pointer;
+		}
+	}
+
+	.auth-container{
+		color: #FFF;
+		padding-top:4%;
+		
+		.auth-options{
+			background: $header-color;
+			z-index:2;
+			padding:8px;
+			display:none;
+			li{
+				list-style-type:none;
+				
+				&:hover{
+					background: #085078;
+					-webkit-transition: ease-in-out 0.2s all;
+					   -moz-transition: ease-in-out 0.2s all;
+					    -ms-transition: ease-in-out 0.2s all;
+					     -o-transition: ease-in-out 0.2s all;
+					        transition: ease-in-out 0.2s all;
+				}
+				a{
+					color: #FFF;
+					font-size:10px;
+					text-decoration:none;
+					
+					.fa{
+						font-size:50px;
+						display:flex;
+						justify-content:center;
+					}
+
+					
+				}
+			}
+		}
+
+
+		.auth{ 
+			color : #fff; 
+			cursor:pointer;
+			&:active{
+
+				.auth-options{
+					display:block;
+					-webkit-transition: ease-in-out 0.3s all;
+					   -moz-transition: ease-in-out 0.3s all;
+					    -ms-transition: ease-in-out 0.3s all;
+					     -o-transition: ease-in-out 0.3s all;
+					        transition: ease-in-out 0.3s all;
+				}
+			}
+
+			&:not(:active){
+				.auth-options{
+					-webkit-transition: ease-in-out 0.3s all;
+					   -moz-transition: ease-in-out 0.3s all;
+					    -ms-transition: ease-in-out 0.3s all;
+					     -o-transition: ease-in-out 0.3s all;
+					        transition: ease-in-out 0.3s all;
+				}
+			}
+		}
+
+	}
+}

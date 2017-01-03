@@ -1,0 +1,246 @@
+@import "node_modules/csspin/csspin";
+
+.overlay {
+	background: #000;
+	width: 100%;
+	height: 100%;
+	position:fixed;
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	z-index:9999;
+	color: #FFF;
+	display:none;
+}
+
+#landing-header{
+	font-family: 'Secular One', sans-serif;
+
+	z-index:2;
+	background:transparent;
+	box-shadow:0px 0px 0px 0px;
+	.nav-wrapper{
+		 /* fallback for old browsers */
+		// background: -webkit-linear-gradient(right, #673AB7, #512DA8);
+		// background: -o-linear-gradient(right, #673AB7, #512DA8);
+		// background: linear-gradient(to left, #673AB7, #512DA8); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		padding-left:2em;
+		padding-right:2em;
+		.brand-logo{
+			text-decoration: none;
+		}
+
+		li{
+			a{
+				text-decoration:none;
+				&:hover{
+					color:#fff;
+					-webkit-transition: ease-in-out 0.2s all;
+					   -moz-transition: ease-in-out 0.2s all;
+					    -ms-transition: ease-in-out 0.2s all;
+					     -o-transition: ease-in-out 0.2s all;
+					        transition: ease-in-out 0.2s all;
+				}
+
+				&:not(:hover){
+					-webkit-transition: ease-in-out 0.2s all;
+					   -moz-transition: ease-in-out 0.2s all;
+					    -ms-transition: ease-in-out 0.2s all;
+					     -o-transition: ease-in-out 0.2s all;
+					        transition: ease-in-out 0.2s all;
+				}
+			}
+		}
+	}
+}
+
+#top {
+	width: 100%;
+	height: 100%;
+	// background: #FFEDBC; /* fallback for old browsers */
+	// background: -webkit-linear-gradient(bottom, #FFEDBC, #0ABFBC);
+	// background: -o-linear-gradient(bottom, #FFEDBC, #0ABFBC);
+	// background: linear-gradient(to top, #FFEDBC, #0ABFBC); /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	        
+	background:url("../images/top.jpg") center;
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
+
+	font-family: 'Secular One', sans-serif;
+	color: #FFF;
+	margin-top:-64px;
+	.left{
+		padding-top:15em;
+		letter-spacing:5px;
+		// border-right: 1px solid #fff;
+		height: 100%;
+	}
+
+	.right{
+		padding-top:5em;
+		padding-left:10em;
+		img{
+			border-shadow: 2px 2px 2px 2px #000;
+		}
+	}
+}
+
+#features{
+	width: 100%;
+	padding-left:0px;
+	padding-right:0px;
+	background: #0095FF; /* fallback for old browsers */
+	// background: -webkit-linear-gradient(to top, #ED4264 , #FFEDBC); /* Chrome 10-25, Safari 5.1-6 */
+	// background: linear-gradient(to top, #ED4264 , #FFEDBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	        
+	font-family: 'Secular One', sans-serif;
+	color: #FFF; 
+	padding:7em;
+	.feature__idea{
+		
+		
+		.fa{
+			font-size:70px;
+			display:flex;
+			justify-content:center;
+		}
+	}
+
+	.feature__school{
+		
+		
+		.fa{
+			font-size:70px;
+			display:flex;
+			justify-content:center;
+		}
+	}
+
+	.feature__devices{
+		
+		
+		.fa{
+			font-size:70px;
+			display:flex;
+			justify-content:center;
+		}
+	}
+
+	.feature__integrations{
+		
+		
+		.fa{
+			font-size:70px;
+			display:flex;
+			justify-content:center;
+		}
+	}
+
+}
+
+#get-started {
+	height:100%;
+	width: 100%;
+	background: url("../images/everywhere-work2.png") center; /* fallback for old browsers */
+	background-size: cover;
+	color: #FFF;
+	font-family: 'Secular One', sans-serif;
+	padding-top:3em;
+	
+	.get-started{
+		margin-top:10em;
+		a{
+			color: #FFF;
+			
+			&:hover{
+				color: #2ecc71;
+				-webkit-transition: ease-in-out 0.2s all;
+				   -moz-transition: ease-in-out 0.2s all;
+				    -ms-transition: ease-in-out 0.2s all;
+				     -o-transition: ease-in-out 0.2s all;
+				        transition: ease-in-out 0.2s all;
+			}
+
+			&:not(:hover){
+				-webkit-transition: ease-in-out 0.2s all;
+				   -moz-transition: ease-in-out 0.2s all;
+				    -ms-transition: ease-in-out 0.2s all;
+				     -o-transition: ease-in-out 0.2s all;
+				        transition: ease-in-out 0.2s all;
+			}
+		}
+	}
+	
+}
+
+#footer {
+	width: 100%;
+	height: 5%;
+	background: #0095FF;
+	z-index:9999;
+	color: #FFF;
+	font-family: 'Secular One', sans-serif;
+	
+	a{
+		color: #FFF;
+		
+		&:hover{
+			color: #FFF;
+		}
+	}
+}
+
+
+#send_message-modal{
+	width: 100%;
+	height:100%;
+	background: transparent;
+	box-shadow:0px 0px 0px 0px;
+	
+	&.modal{
+		margin:0px;
+		max-height:100%;
+	}
+	
+	.modal-dialog{
+
+		.modal-content{
+			height:100%;
+			border-radius:0px;
+			
+			.modal-header{
+				border-bottom:none;
+			}
+
+			.modal-body{
+				
+			}
+
+			.modal-footer{
+				border-top:none;
+				.btn{
+					background: #0095FF;
+					
+					&:hover{
+						background:#2ecc71;
+						-webkit-transition: ease-in-out 0.2s all;
+						   -moz-transition: ease-in-out 0.2s all;
+						    -ms-transition: ease-in-out 0.2s all;
+						     -o-transition: ease-in-out 0.2s all;
+						        transition: ease-in-out 0.2s all;
+					}
+
+					&:not(:hover){
+						-webkit-transition: ease-in-out 0.2s all;
+						   -moz-transition: ease-in-out 0.2s all;
+						    -ms-transition: ease-in-out 0.2s all;
+						     -o-transition: ease-in-out 0.2s all;
+						        transition: ease-in-out 0.2s all;
+					}
+				}
+			}
+		}
+	}
+}
