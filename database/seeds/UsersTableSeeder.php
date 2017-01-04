@@ -20,7 +20,8 @@ class UsersTableSeeder extends Seeder
     		'remember_token' => str_random(10),
     		'active' => 1,
     		'slug' => 'leo-knudsen',
-    		'is_admin' => 1
+    		'is_admin' => 1,
+            'has_active_email' => 1
     	]);
 
         factory(Notifier\User::class, rand(1, 10))->create();
