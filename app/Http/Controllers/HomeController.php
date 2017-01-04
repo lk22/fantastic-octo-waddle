@@ -40,6 +40,7 @@ class HomeController extends Controller
      */
     public function welcome()
     {
+        // welcome view
         return view('welcome');
     }
 
@@ -49,9 +50,11 @@ class HomeController extends Controller
      */
     public function logout()
     {
+        // if user is not logged in return back to home view
         if(!auth()->check())
             return redirect('/');
 
+        // show logout view
         return view('auth.logout');
     }
 
@@ -62,36 +65,42 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // get authenticated user
         $user = auth()->user();
         
+        // fetch all suers notes
         $notes = $this->note->where('user_id', $user->id)->get();
 
+        // make data accessable through JavaScript
         $js_variables = [
             'notes' => $this->noteTransformer->transformCollection($notes)
         ];
 
-        // return $js_variables['notes'];
-
-        // return $notes;
-
+        // return home view with data
         return view('home', compact('notes', 'js_variables'));
     }
 
     public function profile($user_slug)
     {
+        // grab the first user with the user slug
+        $profile = $this->user->whereSlug($user_slug)->firstOrFail();
 
-        $profile = $this->user->whereSlug(auth()->user()->slug)->firstOrFail();
-
+        // if profile not exists 
         if(!$profile)
-        {
+        {   
+            // return 404
             return view('errors.404');
         }
 
-        return $profile;
 
+        return $profile;
+        // make the profile accessable with JavaScript
         $js_variables = [
             'profile' => $this->userTransformer->transform($profile)
         ];
+
+        // return view with data
+        return view('auth.profile', compact('profile', 'js_variables'));
     }
 
     /**
@@ -101,11 +110,13 @@ class HomeController extends Controller
      */
     public function storeMessage(CreateMessageRequest $request)
     {
+        // get the sender 
         $sender = $request->all();
-        // dd($sender);
-
+        
+        // if the sender exists
         if($sender)
         {
+            // create a new message with the given form data
             $this->message->create([
                 'firstname' => $sender['firstname'],
                 'lastname' => $sender['lastname'],
@@ -113,19 +124,23 @@ class HomeController extends Controller
                 'body' => $sender['message']
             ]);
 
+            // send an mail to the message sender 
             Mail::to($request->get('email'))->send(new NewMessageSendMail($request->all()));
 
+            // flash some data to the session
             Session::flash(
                 'send_successfull',
                 'Dear ' . $request->get('firstname') . ' ' . $request->get('lastname') . ' Thanks for contacting us we will respond to you as quick as possible'
             );
+
+            // redirect back with the session
+            return redirect()->back();
         }
-
-        Session::flash(
-            'send_failed',
-            'Dear ' . $request->get('firstname') . ' ' . $request->get('lastname') . ' something went wrong sending your message please try again later, Cheers'
-        );
-
-        return redirect()->back();
+        // else
+        else
+        {
+            // return 500
+            return view('errors.500');
+        }
     }
 }
