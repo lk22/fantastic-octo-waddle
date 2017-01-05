@@ -8099,7 +8099,7 @@ hr {
 
 #profile .profile-header .avatar {
   position: absolute;
-  top: 67px;
+  top: 10px;
 }
 
 #profile .profile-header .profile-header__avatar-details {
@@ -8107,15 +8107,14 @@ hr {
   margin-top: 3em;
   height: 58px;
   position: relative;
-  top: 127px;
-  border-bottom: 1px solid #0095FF;
-  border-right: 1px solid #0095FF;
+  top: 70px;
   margin: 42px;
   margin-left: -36px;
+  color: #FFF;
 }
 
 #profile .profile-header .profile-header__avatar-details span {
-  margin-left: 2em;
+  margin-left: 1em;
 }
 
 body {

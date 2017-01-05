@@ -13,23 +13,24 @@ $profile-color: #0095FF;
 
 		.avatar{
 			position:absolute;
-			top:67px;
-			
+			top:10px;
 		} 
 		.profile-header__avatar-details{
 			padding:1em;
 			margin-top:3em;
 			height:58px;
 			position:relative;
-			top:127px;
-			border-bottom:1px solid $profile-color;
-			border-right:1px solid $profile-color;
+			top:70px;
 			margin:42px;
 			margin-left:-36px;
-			
+			color: #FFF;
 			
 			span{
-				margin-left:2em;
+				margin-left:1em;
+			}
+
+			.label{
+				
 			}
 		}
 	}

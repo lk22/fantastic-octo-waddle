@@ -20,7 +20,7 @@
 				<div class="col-md-8 profile-header__avatar-details">
 					<span>{{ $auth->name }}</span> 
 					<span>{{ $auth->email }}</span>
-					<span>@if($auth->active) User is active @else User is not active @endif</span>
+					<span>@if($auth->active && $auth->has_active_email)<span class="label label-success"> <strong>U</strong>ser is active </span> @else <span class="label label-danger"><strong>U</strong>ser is not active</span>@endif</span>
 				</div>
 			</div>
 		</div>
