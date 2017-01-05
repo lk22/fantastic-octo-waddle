@@ -33,6 +33,7 @@ class HomeControllerTest extends TestCase
         // show notes from the authenticated user
         $notes = $this->user->with('notes')->where('id', $this->user->id)->get();
         
+        // assert the notes exists
         $this->assertTrue(count($notes) > 0);
     }
 
@@ -41,10 +42,13 @@ class HomeControllerTest extends TestCase
      */
     public function show_authed_profile()
     {
+        // login user
         $this->actingAs($this->user);
 
+        // fetch profile
         $profile = $this->user->whereSlug($this->user->slug)->get();
 
+        // assert profile exists
         $this->assertTrue(count($profile) > 0);
     }
 }

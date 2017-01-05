@@ -1,0 +1,36 @@
+$profile-color: #0095FF;
+
+#profile{
+	min-height:656px;
+	width: 100%;
+	background:#E9EBEE;
+	.profile-header{
+		height:218px;
+		width: 100%;
+		background: #00d2ff; /* fallback for old browsers */
+		background: -webkit-linear-gradient(to left, #00d2ff , #3a7bd5); /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to left, #00d2ff , #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+		.avatar{
+			position:absolute;
+			top:67px;
+			
+		} 
+		.profile-header__avatar-details{
+			padding:1em;
+			margin-top:3em;
+			height:58px;
+			position:relative;
+			top:127px;
+			border-bottom:1px solid $profile-color;
+			border-right:1px solid $profile-color;
+			margin:42px;
+			margin-left:-36px;
+			
+			
+			span{
+				margin-left:2em;
+			}
+		}
+	}
+}

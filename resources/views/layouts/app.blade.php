@@ -1,11 +1,13 @@
+<?php $auth = auth()->user(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     @include('layouts.head')
 </head>
 <body>
-     <?php $form = new AdamWathan\Form\FormBuilder; ?>
-
+    <?php $form = new AdamWathan\Form\FormBuilder; ?>
+    <?php $auth = auth()->user(); ?>
     <div class="container-fluid error-container">
         {{-- <p class="text-center">You are currently offline please try reconnecting </p> --}}
     </div>
@@ -13,7 +15,7 @@
      <div class="container-fluid connection-error-container">
         {{-- <p class="text-center">You are currently offline please try reconnecting </p> --}}
     </div>
-    @if(!auth()->user()->active)
+    @if(!$auth->active)
         <div class="container-fluid not-active-email-container">
             <p class="text-center">You need to activate your account check your inbox for more information</p>
         </div>

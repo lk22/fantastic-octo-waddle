@@ -8079,6 +8079,45 @@ hr {
   color: #0095FF;
 }
 
+#profile {
+  min-height: 656px;
+  width: 100%;
+  background: #E9EBEE;
+}
+
+#profile .profile-header {
+  height: 218px;
+  width: 100%;
+  background: #00d2ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00d2ff, #3a7bd5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(right, #00d2ff, #3a7bd5);
+  background: linear-gradient(to left, #00d2ff, #3a7bd5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#profile .profile-header .avatar {
+  position: absolute;
+  top: 67px;
+}
+
+#profile .profile-header .profile-header__avatar-details {
+  padding: 1em;
+  margin-top: 3em;
+  height: 58px;
+  position: relative;
+  top: 127px;
+  border-bottom: 1px solid #0095FF;
+  border-right: 1px solid #0095FF;
+  margin: 42px;
+  margin-left: -36px;
+}
+
+#profile .profile-header .profile-header__avatar-details span {
+  margin-left: 2em;
+}
+
 body {
   background: #fff;
 }

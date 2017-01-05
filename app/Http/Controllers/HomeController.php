@@ -92,8 +92,8 @@ class HomeController extends Controller
             return view('errors.404');
         }
 
-
-        return $profile;
+        // return $profile;
+        
         // make the profile accessable with JavaScript
         $js_variables = [
             'profile' => $this->userTransformer->transform($profile)

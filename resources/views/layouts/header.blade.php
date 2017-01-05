@@ -26,7 +26,7 @@
 					</a>
 				</li> --}}
 				<li class="col-md-3">
-					<a href="{{ route('auth.profile', $auth->slug) }}">
+					<a href="{{ route('auth.profile', [$auth->slug]) }}">
 						<span class="row">
 							<i class="fa fa-user"></i>
 						</span>
