@@ -30,4 +30,9 @@ elixir((mix) => {
     	// components
     	'Notifier/components/Header.js'
     ], 'public/js/notifier.js');
+
+    mix.copy(
+        'resources/assets/js/vendor/vue.js',
+        'public/js/vendor/vue.js'
+    );
 });

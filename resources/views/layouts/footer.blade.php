@@ -14,6 +14,8 @@
     
     <script src="https://use.fontawesome.com/52f2593b64.js"></script>
 
+    <script src="/js/vendor/vue.js"></script>
+
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     {{-- <script scr="/js/app.js"></script>
     {{-- <script scr="/js/helpers.js"></script> --}}

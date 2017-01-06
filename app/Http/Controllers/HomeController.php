@@ -10,6 +10,7 @@ use Notifier\Mail\NewMessageSendMail;
 use Notifier\Note;
 use Notifier\Message;
 use Notifier\User;
+use Notifier\Comment;
 use Notifier\Transformers\NoteTransformer;
 use Notifier\Transformers\UserTransformer;
 
@@ -23,11 +24,12 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct(User $user, Note $note, Message $message, Mail $mailer, NoteTransformer $noteTransformer, UserTransformer $userTransformer)
+    public function __construct(User $user, Note $note, Message $message, Comment $comment, Mail $mailer, NoteTransformer $noteTransformer, UserTransformer $userTransformer)
     {
         $this->middleware('auth', ['only' => 'index']);
         $this->user = $user;
         $this->note = $note;
+        $this->comment = $comment;
         $this->mailer = $mailer;
         $this->message = $message;
         $this->noteTransformer = $noteTransformer;
@@ -83,7 +85,11 @@ class HomeController extends Controller
     public function profile($user_slug)
     {
         // grab the first user with the user slug
-        $profile = $this->user->whereSlug($user_slug)->firstOrFail();
+        $profile = $this->user->with('notes.comments')->whereSlug($user_slug)->firstOrFail();
+
+        // grab comments that belongs to the notes wich belongs belong to the authenticated user
+
+        return $profile;
 
         // if profile not exists 
         if(!$profile)
