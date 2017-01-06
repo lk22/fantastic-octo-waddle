@@ -35,7 +35,7 @@ Route::group(['prefix' => 'app/home'], function() {
 
 	Route::group(['prefix' => 'profile'], function() 
 	{
-		Route::get('/{user_slug}', ['as' => 'auth.profile', 'uses' => 'HomeController@profile']);
+		Route::get('/{user_slug}', ['as' => 'auth.profile', 'uses' => 'UserController@profile']);
 	});
 
 	// Route::get('/get-started', ['as' => ''])

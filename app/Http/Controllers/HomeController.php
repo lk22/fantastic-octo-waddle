@@ -82,33 +82,6 @@ class HomeController extends Controller
         return view('home', compact('notes', 'js_variables'));
     }
 
-    public function profile($user_slug)
-    {
-        // grab the first user with the user slug
-        $profile = $this->user->with('notes.comments')->whereSlug($user_slug)->firstOrFail();
-
-        // grab comments that belongs to the notes wich belongs belong to the authenticated user
-
-        return $profile;
-
-        // if profile not exists 
-        if(!$profile)
-        {   
-            // return 404
-            return view('errors.404');
-        }
-
-        // return $profile;
-        
-        // make the profile accessable with JavaScript
-        $js_variables = [
-            'profile' => $this->userTransformer->transform($profile)
-        ];
-
-        // return view with data
-        return view('auth.profile', compact('profile', 'js_variables'));
-    }
-
     /**
      * storing new message ressource and sending email to the client
      * @param  CreateMessageRequest $request [description]

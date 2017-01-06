@@ -6,22 +6,45 @@ use Illuminate\Http\Request;
 
 use Mail;
 use Notifier\Mail\WelcomeToNotifier;
+use Notifier\Transformers\UserTransformer;
 
 use Notifier\User;
 
 class UserController extends Controller
 {
 
-	public function __construct(User $user)
+	public function __construct(User $user, UserTransformer $userTransformer)
 	{
 		$this->user = $user;
+        $this->userTransformer = $userTransformer;
 	}
 
-    public function profile($id)
+    /**
+     * showing the authenticated user profiler
+     * @param  [type] $user_slug [description]
+     * @return [type]            [description]
+     */
+    public function profile($user_slug)
     {
-    	// show user with specific id
-    	// show the users latests notes
-    	// return view with the profile data
+        // grab the first user with the user slug and notes and comments
+        $profile = $this->user->with('notes.comments')->whereSlug($user_slug)->get();
+
+        // if profile not exists 
+        if(!$profile)
+        {   
+            // return 404
+            return view('errors.404');
+        }
+
+        // return $profile;
+        
+        // make the profile accessable with JavaScript
+        $js_variables = [
+            'profile' => $profile
+        ];
+
+        // return view with data
+        return view('auth.profile', compact('profile', 'js_variables'));
     }
 
     /**
